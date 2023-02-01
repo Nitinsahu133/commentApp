@@ -76,11 +76,15 @@
   font-size: 14px;
 }
 
-.comment-like-text {
+.like-button {
+  border: none;
+  background-color: transparent;
   padding: 0;
   margin-left: 10px;
   font-family: Roboto;
   color: #7e858e;
+  outline: none;
+  cursor: pointer;
   font-size: 12px;
 }
 
@@ -100,4 +104,11 @@
 
 .liked-comment {
   color: #0ea5e9;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

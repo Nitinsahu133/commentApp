@@ -9,7 +9,7 @@ const CommentItem = props => {
     likeComment,
     letterBgColorClassName,
   } = props
-  const {name, comment, time, id, isLike} = commentDetails
+  const {name, comment, date, id, isLike} = commentDetails
   const likedClass = isLike ? 'liked-comment' : ''
 
   const onClickDeleteComment = () => {
@@ -31,7 +31,7 @@ const CommentItem = props => {
         <div>
           <p className="commenter-name">
             {name}
-            <span className="comment-time"> {time}</span>
+            <span className="comment-time"> {formatDistanceToNow(date)}</span>
           </p>
           <p className="comment-paragraph">{comment}</p>
         </div>
@@ -52,18 +52,25 @@ const CommentItem = props => {
               src="https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png"
             />
           )}
-          <p
+          <button
+            type="button"
             onClick={onClickLike}
-            className={`comment-like-text ${likedClass}`}
+            className={`like-button ${likedClass}`}
           >
             Like
-          </p>
+          </button>
         </div>
-        <img
+        <button
           onClick={onClickDeleteComment}
-          alt="delete"
-          src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
-        />
+          type="button"
+          data-testid="delete"
+          className="delete-button"
+        >
+          <img
+            alt="delete"
+            src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
+          />
+        </button>
       </div>
       <hr className="comment-item-horizontal-line" />
     </li>

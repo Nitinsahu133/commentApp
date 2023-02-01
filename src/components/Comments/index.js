@@ -33,7 +33,7 @@ class Comments extends Component {
   addComment = event => {
     event.preventDefault()
     const {name, comment, commentList} = this.state
-    const currentDateTime = new Date()
+    const date = new Date()
     if (name !== '' && comment !== '') {
       this.setState({
         commentList: [
@@ -42,7 +42,7 @@ class Comments extends Component {
             id: uuidv4(),
             name,
             comment,
-            time: currentDateTime,
+            date,
             isLike: false,
           },
         ],
