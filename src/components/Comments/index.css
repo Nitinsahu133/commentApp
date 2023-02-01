@@ -1,0 +1,140 @@
+/* Write your CSS here */
+.main-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-heading {
+  color: #1e293b;
+  font-family: Roboto;
+  align-self: flex-start;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.main-image-desktop {
+  display: none;
+}
+
+.page-description {
+  color: #475569;
+  font-family: Roboto;
+}
+
+.input-element {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: Roboto;
+  border-radius: 3px;
+  color: #475569;
+  border-color: #475569;
+  outline: none;
+}
+
+.textarea-element {
+  width: 100%;
+  max-width: 400px;
+  height: 150px;
+  margin-bottom: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: Roboto;
+  color: #475569;
+  border-radius: 3px;
+  outline: none;
+}
+
+.add-comment-button {
+  cursor: pointer;
+  color: white;
+  background-color: #0284c7;
+  font-family: Roboto;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.horizontal-line {
+  width: 100%;
+  background-color: #cbd2d9;
+  opacity: 0.8;
+}
+
+.comment-container {
+  display: flex;
+  align-items: center;
+}
+
+.no-of-comment-container {
+  background-color: #0284c7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  border-radius: 3px;
+  height: 25px;
+  width: 25px;
+}
+
+.no-of-comment {
+  margin: 5px;
+  font-family: Roboto;
+  color: white;
+  font-weight: bold;
+}
+
+.comment-heading {
+  font-family: Roboto;
+  font-weight: 400;
+  color: 1e293b;
+}
+
+.comment-ul-container {
+  width: 100%;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .main-image {
+    display: none;
+  }
+
+  .main-image-desktop {
+    display: inline;
+    width: 80%;
+    margin-left: 30px;
+    box-sizing: border-box;
+  }
+
+  .desktop-comment-image-div {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+  }
+}
